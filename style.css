@@ -1,0 +1,602 @@
+html{
+    scroll-behavior:smooth;
+}
+
+/* =====================================
+   GENERAL STYLES
+===================================== */
+
+body{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    background:#f4f4f4;
+    color:#333;
+    line-height:1.7;
+    scroll-behavior:smooth;
+}
+
+/* =====================================
+   HEADER
+===================================== */
+
+header{
+    background:green;
+    color:white;
+    text-align:center;
+    padding:30px;
+    box-shadow:0 4px 10px rgba(0,0,0,.2);
+}
+
+header img{
+    width:250px;
+    height:auto;
+    display:block;
+    margin:0 auto 15px;
+}
+
+header h1{
+    margin:10px 0;
+}
+
+header p{
+    margin:0;
+}
+
+/* =====================================
+   NAVIGATION
+===================================== */
+
+nav{
+    background:#000;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#7CFC00;
+}
+
+/* Dark Mode Button */
+
+#themeBtn{
+    margin-left:20px;
+    padding:8px 15px;
+    border:none;
+    border-radius:6px;
+    background:white;
+    cursor:pointer;
+    transition:.3s;
+}
+
+#themeBtn:hover{
+    background:#ddd;
+}
+
+/* =====================================
+   SECTION
+===================================== */
+
+section{
+    background:white;
+    margin:20px;
+    padding:25px;
+    border-radius:10px;
+}
+
+h2{
+    color:green;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+h3{
+    color:darkgreen;
+}
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+#gallery img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+#gallery img:hover {
+    transform: scale(1.05);
+}
+header {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.team-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.team-card {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+}
+
+.team-card img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.team-card h3 {
+    color: green;
+    margin-bottom: 10px;
+}
+.mission-container{
+    display:flex;
+    justify-content:center;
+    gap:25px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+.mission-card{
+    width:420px;
+    background:#e8f5e9;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.3s;
+}
+
+.mission-card:hover{
+    transform:translateY(-8px);
+}
+
+.mission-card h3{
+    color:green;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.mission-card p{
+    text-align:justify;
+    line-height:1.7;
+}
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero{
+    position:relative;
+    height:600px;
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-align:center;
+    border-radius:10px;
+}
+
+/* =====================================
+   IMAGE SLIDER
+===================================== */
+
+.slider{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:0;
+}
+
+.slider img{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    opacity:0;
+    transition:opacity 1s ease-in-out;
+}
+
+.slider img.active{
+    opacity:1;
+}
+
+/* =====================================
+   HERO CONTENT
+===================================== */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+    max-width:800px;
+    padding:20px;
+}
+
+.hero-content h2{
+    font-size:42px;
+    color:white;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:20px;
+    margin-bottom:30px;
+}
+
+/* =====================================
+   HERO BUTTON
+===================================== */
+
+.hero-btn{
+    display:inline-block;
+    background:green;
+    color:white;
+    text-decoration:none;
+    padding:15px 35px;
+    border-radius:8px;
+    font-size:18px;
+    transition:.3s;
+}
+
+.hero-btn:hover{
+    background:darkgreen;
+    transform:scale(1.05);
+}
+.latest-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:30px;
+}
+
+.latest-card{
+    width:300px;
+    background:#ffffff;
+    padding:20px;
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
+    transition:0.3s;
+    border-top:5px solid green;
+}
+
+.latest-card:hover{
+    transform:translateY(-8px);
+}
+
+.latest-card h3{
+    color:green;
+    text-align:center;
+    margin-bottom:15px;
+}
+
+.latest-card p{
+    text-align:justify;
+    line-height:1.6;
+}
+.stats-container{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:25px;
+    margin-top:30px;
+}
+
+.stat-card{
+    width:220px;
+    background:green;
+    color:white;
+    padding:25px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 5px 12px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.stat-card:hover{
+    transform:translateY(-8px);
+}
+
+.stat-card h3{
+    color:white;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.stat-card p{
+    font-size:18px;
+}
+.contact-container{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.contact-info{
+    flex:1;
+    min-width:300px;
+}
+
+.contact-info h3{
+    color:green;
+    margin-bottom:20px;
+}
+
+.contact-info p{
+    margin-bottom:15px;
+    line-height:1.8;
+}
+
+.contact-map{
+    flex:1;
+    min-width:300px;
+}
+
+.contact-map iframe{
+    border-radius:12px;
+    box-shadow:0 4px 10px rgba(0,0,0,0.2);
+}
+/* ===========================
+   Mobile Responsive Design
+=========================== */
+
+@media (max-width:768px){
+
+    header{
+        padding:20px;
+    }
+
+    header img{
+        width:150px;
+    }
+
+    header h1{
+        font-size:26px;
+    }
+
+    nav{
+        padding:10px;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+        font-size:18px;
+    }
+
+    section{
+        margin:15px;
+        padding:20px;
+    }
+
+    .hero{
+        height:450px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .hero-btn{
+        padding:12px 25px;
+        font-size:16px;
+    }
+
+    .gallery-container,
+    .team-container,
+    .mission-container,
+    .latest-container,
+    .stats-container,
+    .contact-container{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .gallery-container img,
+    .team-card,
+    .mission-card,
+    .latest-card,
+    .stat-card{
+        width:90%;
+    }
+
+    .contact-info,
+    .contact-map{
+        width:100%;
+    }
+
+    footer{
+        font-size:14px;
+        padding:20px;
+    }
+
+}
+/* Scroll To Top Button */
+
+#topBtn{
+    display:none;
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    z-index:999;
+    border:none;
+    outline:none;
+    background-color:green;
+    color:white;
+    cursor:pointer;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    font-size:24px;
+    transition:0.3s;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+}
+
+#topBtn:hover{
+    background-color:darkgreen;
+    transform:scale(1.1);
+}
+/* ===========================
+   Scroll Animation
+=========================== */
+
+section{
+    opacity:0;
+    transform:translateY(50px);
+    transition:all 0.8s ease;
+}
+
+section.show{
+    opacity:1;
+    transform:translateY(0);
+}
+/* ===========================
+   WhatsApp Floating Button
+=========================== */
+
+#whatsappBtn{
+    position:fixed;
+    bottom:85px;
+    right:20px;
+    width:60px;
+    height:60px;
+    z-index:999;
+}
+
+#whatsappBtn img{
+    width:100%;
+    height:100%;
+    border-radius:50%;
+    box-shadow:0 4px 10px rgba(0,0,0,0.3);
+    transition:0.3s;
+}
+
+#whatsappBtn img:hover{
+    transform:scale(1.1);
+}
+/* ===========================
+   Contact Form
+=========================== */
+
+.contact-form{
+    flex:1;
+    min-width:300px;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+}
+
+.contact-form input,
+.contact-form textarea{
+    padding:15px;
+    margin-bottom:15px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    font-size:16px;
+    outline:none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    border-color:green;
+}
+
+.contact-form button{
+    background:green;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    font-size:18px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:darkgreen;
+}
+/* ===========================
+   Dark Mode
+=========================== */
+
+
+.dark-mode{
+    background:#1b1b1b;
+    color:white;
+}
+
+.dark-mode section{
+    background:#2c2c2c;
+    color:white;
+}
+
+.dark-mode footer{
+    background:#111;
+}
+
+.dark-mode nav{
+    background:#111;
+}
+
+.dark-mode .team-card,
+.dark-mode .latest-card,
+.dark-mode .mission-card{
+    background:#333;
+    color:white;
+}
+
+.dark-mode h2,
+.dark-mode h3{
+    color:#7CFC00;
+}
